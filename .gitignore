@@ -3,10 +3,12 @@ ngrok.yml
 data/*
 *.jpg
 *.png
-*.pth
 
 **.vscode
 __pycache__
 
 **/mlruns/
 .idea
+
+***.DS_Store
+**.~lock.*
