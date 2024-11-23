@@ -34,5 +34,5 @@ jobs:
         context: .
         push: true
         tags: |
-          ghcr.io/${{ github.repository_owner.toLowerCase() }}/covision-api:latest
-          ghcr.io/${{ github.repository_owner.toLowerCase() }}/covision-api:${{ github.run_number }}
+          ghcr.io/mi4people/covision-api:latest
+          ghcr.io/mi4people/covision-api:${{ github.run_number }}
