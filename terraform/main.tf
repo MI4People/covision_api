@@ -74,6 +74,9 @@ resource "aws_lambda_function" "covision_api_lambda" {
 resource "aws_apigatewayv2_api" "covision_api_gateway" {
   name          = "CovisionApiGateway"
   protocol_type = "HTTP"
+  cors_configuration {
+    allow_headers = ["x-api-password"]
+  }
 }
 
 resource "aws_lambda_permission" "apigw_lambda" {
@@ -102,5 +105,14 @@ resource "aws_apigatewayv2_stage" "default_stage" {
   auto_deploy = true
 }
 
+resource "aws_apigatewayv2_stage" "prod_stage" {
+  api_id      = aws_apigatewayv2_api.covision_api_gateway.id
+  name        = "prod"
+  auto_deploy = false
+}
 
-# error to process in lambda
+resource "aws_apigatewayv2_deployment" "prod_deployment" {
+  api_id = aws_apigatewayv2_api.covision_api_gateway.id
+  stage_name = aws_apigatewayv2_stage.prod_stage.name
+}
+   
