@@ -1,0 +1,18 @@
+**.vscode
+docs
+.gitignore
+old_stuff
+Deployment_README.md
+**.ipynb_checkpoints
+saved_models
+**mlruns
+# Ignore version control directories
+.git
+.gitignore
+**__pycache__
+**.ipynb_checkpoints
+**/data_seg
+**/model_seg
+**/models_cla
+**/data_cla
+**.idea
