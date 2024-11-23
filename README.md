@@ -1,19 +1,5 @@
-# CoVision
+# CoVision API
 
+API for the CoVision project. Provide an endpoint to infer the model and return the Covid results.
 
-To be continued...
-
-
-# Directory structure
-
-`data`:
-`segmentation`
-`classification`
-`utils`: Contains some util scripts common to both, segmentation and classification, pipelines.
-
-
-#TODOs
-
-* Replace prints for logging
-* Add description to the arguments in the configuration files
-* Add directory structure image (like the one from cookiecutter)
+The model files are stored with Git LFS. To download the model files, you need to install Git LFS. You can install Git LFS by following the instructions [here](https://git-lfs.github.com/).
